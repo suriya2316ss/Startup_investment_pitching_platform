@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pitches | Startup Investment</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* Embedded CSS for smooth experience (you can move to external CSS file) */
+
+        :root {
+            --primary: #4f46e5;
+            --secondary: #6b7280;
+            --bg: #f9fafb;
+            --text: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #e0e7ff, #eef2ff);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+
+        .filters {
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .filters h2 {
+            margin-bottom: 1rem;
+        }
+
+        #filter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        select, button {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #4338ca;
+        }
+
+        .pitches-list {
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .pitches-list h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .pitch-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease;
+        }
+
+        .pitch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pitch-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        footer {
+            background: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            #filter-form {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="investors.html"><i class="fas fa-user-tie"></i> Investors</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>🚀 Explore Startup Pitches</h1>
+            <p>Discover innovative ideas and connect with startups seeking investment.</p>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <h2>🎯 Filter Pitches</h2>
+            <form id="filter-form">
+                <label for="industry">Industry:</label>
+                <select id="industry" name="industry">
+                    <option value="all">All</option>
+                    <option value="tech">Technology</option>
+                    <option value="health">Healthcare</option>
+                    <option value="finance">Finance</option>
+                </select>
+
+                <label for="funding-stage">Funding Stage:</label>
+                <select id="funding-stage" name="funding-stage">
+                    <option value="all">All</option>
+                    <option value="seed">Seed</option>
+                    <option value="series-a">Series A</option>
+                    <option value="series-b">Series B</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </form>
+        </section>
+
+        <!-- Pitches List Section -->
+        <section class="pitches-list">
+            <h2>✨ Featured Pitches</h2>
+
+            <div class="pitch-card">
+                <h3>EcoTech Solutions 🌿</h3>
+                <p>Sustainable energy solutions for tomorrow.</p>
+                <p><strong>Funding Stage:</strong> Seed</p>
+                <p><strong>Industry:</strong> Technology</p>
+                <a href="#details" class="btn-outline">View Details</a>
+            </div>
+
+            <div class="pitch-card">
+                <h3>MedTech Innovations 🧬</h3>
+                <p>AI-powered diagnostics for healthcare.</p>
+                <p><strong>Funding Stage:</strong> Series A</p>
+                <p><strong>Industry:</strong> Healthcare</p>
+                <a href="#details" class="btn-outline">View Details</a>
+            </div>
+
+            <div class="pitch-card">
+                <h3>FinTech Revolution 💸</h3>
+                <p>Democratizing financial services.</p>
+                <p><strong>Funding Stage:</strong> Pre-Seed</p>
+                <p><strong>Industry:</strong> Finance</p>
+                <a href="#details" class="btn-outline">View Details</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Startup Investment Pitching Platform</p>
+    </footer>
+
+</body>
+</html>

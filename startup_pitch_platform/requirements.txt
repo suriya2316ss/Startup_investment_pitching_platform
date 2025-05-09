@@ -1,0 +1,10 @@
+django==4.2.10                # Stable LTS Django version
+django-cors-headers==4.3.1    # For handling CORS (API security & frontend integration)
+djangorestframework==3.14.0   # DRF for API building
+whitenoise==6.6.0             # To serve static files in production
+Pillow==10.1.0                # Image processing (uploads, profile pics etc.)
+channels==4.0.0               # For WebSocket support (real-time features)
+channels-redis==4.1.0         # Redis backend for Channels (message layer)
+openai==1.5.0                 # OpenAI API (ChatGPT / GPT models integration)
+python-decouple
+django-filter==23.2

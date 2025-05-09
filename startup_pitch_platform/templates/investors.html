@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investors</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4f7, #e0f7fa);
+      overflow-x: hidden;
+    }
+
+    main {
+      animation: fadeInPage 1s ease;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #004d40, #00796b);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+    }
+
+    .featured-investors, .why-invest, .cta {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .featured-investors h2,
+    .why-invest h2,
+    .cta h2 {
+      font-size: 2.5em;
+      color: #00796b;
+      margin-bottom: 15px;
+    }
+
+    .investor-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .investor-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .investor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    .investor-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .why-invest ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .why-invest ul li {
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .why-invest ul li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .cta {
+      background: linear-gradient(to right, #26a69a, #80cbc4);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 20px;
+      margin: 40px auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background-color: #004d40;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #00332d;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInPage {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Stickers/Emojis for Investors */
+    .investor-card h3::before {
+      content: "💼 ";
+    }
+    .investor-card:nth-child(2) h3::before {
+      content: "🏥 ";
+    }
+    .investor-card:nth-child(3) h3::before {
+      content: "🛍️ ";
+    }
+  </style>
+</head>
+<body>
+  {% include 'partials/navbar.html' %}
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Meet Our Investors 🚀</h1>
+        <p>Discover visionary investors who are funding the next generation of startups.</p>
+      </div>
+    </section>
+
+    <!-- Featured Investors Section -->
+    <section class="featured-investors">
+      <div class="container">
+        <h2>🌟 Featured Investors</h2>
+        <p>Explore profiles of investors actively seeking opportunities in various industries.</p>
+        <div class="investor-cards">
+          <div class="investor-card">
+            <img src="/static/img/investor1.jpg" alt="Investor 1">
+            <h3>Michael Robertson</h3>
+            <p>Angel Investor</p>
+            <p>Focus: Fintech, SaaS, AI</p>
+            <p>💸 37 Investments</p>
+          </div>
+          <div class="investor-card">
+            <img src="/static/img/investor2.jpg" alt="Investor 2">
+            <h3>Venture Capital Partners</h3>
+            <p>VC Firm</p>
+            <p>Focus: Healthcare, Biotech</p>
+            <p>💰 $45M Deployed</p>
+          </div>
+          <div class="investor-card">
+            <img src="/static/img/investor3.jpg" alt="Investor 3">
+            <h3>Elena Kim</h3>
+            <p>Seed Investor</p>
+            <p>Focus: E-commerce, Consumer Apps</p>
+            <p>📈 21 Investments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Invest Section -->
+    <section class="why-invest">
+      <div class="container">
+        <h2>🤝 Why Invest with Us?</h2>
+        <p>We connect you with innovative startups that align with your investment goals.</p>
+        <ul>
+          <li>Access to a curated list of high-potential startups.</li>
+          <li>Comprehensive pitch decks and financial data.</li>
+          <li>AI-powered matching for personalized recommendations.</li>
+          <li>Dedicated support for due diligence and deal closure.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>🚀 Ready to Invest?</h2>
+        <p>Join our platform and start discovering the next big thing in the startup world.</p>
+        <a href="{% url 'register' %}" class="btn btn-primary">Sign Up as an Investor</a>
+      </div>
+    </section>
+  </main>
+  {% include 'partials/footer.html' %}
+</body>
+</html>
