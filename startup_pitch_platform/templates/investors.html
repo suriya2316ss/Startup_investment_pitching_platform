@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Meet Our Investors</h1>
+                <p>Discover visionary investors who are funding the next generation of startups.</p>
+            </div>
+        </section>
+
+        <!-- Featured Investors Section -->
+        <section class="featured-investors">
+            <div class="container">
+                <h2>Featured Investors</h2>
+                <p>Explore profiles of investors actively seeking opportunities in various industries.</p>
+                <div class="investor-cards">
+                    <div class="investor-card">
+                        <img src="/static/img/investor1.jpg" alt="Investor 1">
+                        <h3>Michael Robertson</h3>
+                        <p>Angel Investor</p>
+                        <p>Focus: Fintech, SaaS, AI</p>
+                        <p>37 Investments</p>
+                    </div>
+                    <div class="investor-card">
+                        <img src="/static/img/investor2.jpg" alt="Investor 2">
+                        <h3>Venture Capital Partners</h3>
+                        <p>VC Firm</p>
+                        <p>Focus: Healthcare, Biotech</p>
+                        <p>$45M Deployed</p>
+                    </div>
+                    <div class="investor-card">
+                        <img src="/static/img/investor3.jpg" alt="Investor 3">
+                        <h3>Elena Kim</h3>
+                        <p>Seed Investor</p>
+                        <p>Focus: E-commerce, Consumer Apps</p>
+                        <p>21 Investments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Invest Section -->
+        <section class="why-invest">
+            <div class="container">
+                <h2>Why Invest with Us?</h2>
+                <p>We connect you with innovative startups that align with your investment goals.</p>
+                <ul>
+                    <li>Access to a curated list of high-potential startups.</li>
+                    <li>Comprehensive pitch decks and financial data.</li>
+                    <li>AI-powered matching for personalized recommendations.</li>
+                    <li>Dedicated support for due diligence and deal closure.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Invest?</h2>
+                <p>Join our platform and start discovering the next big thing in the startup world.</p>
+                <a href="{% url 'register' %}" class="btn btn-primary">Sign Up as an Investor</a>
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,555 @@
+/*
+* Startup Investment Pitching Platform
+* Sections and Components Stylesheet
+*/
+
+/* ====================
+   Hero Section
+   ==================== */
+.hero-section {
+    padding: 10rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    width: 55%;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-3d-model {
+    width: 40%;
+    animation: fadeInRight 1s ease;
+}
+
+#hero-model-container {
+    width: 100%;
+    height: 500px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ====================
+   Featured Section
+   ==================== */
+.featured-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.pitches-carousel {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.pitch-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pitch-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    transform: translateY(0);
+}
+
+.pitch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pitch-img {
+    height: 200px;
+    background-color: var(--primary-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.pitch-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: white;
+}
+
+.funding-stage {
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.funding-amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.pitch-content {
+    padding: 1.5rem;
+}
+
+.pitch-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.pitch-tagline {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.pitch-stats {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.pitch-stats i {
+    margin-right: 0.25rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-prev, .carousel-next {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    pointer-events: auto;
+    transition: var(--transition);
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.section-footer {
+    text-align: center;
+}
+
+/* ====================
+   How It Works Section
+   ==================== */
+.how-it-works-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+.step-3d-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+}
+
+/* ====================
+   Success Stories Section
+   ==================== */
+.success-stories-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.story {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.story-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.story-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.story:hover .story-img img {
+    transform: scale(1.05);
+}
+
+.story-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.funding-info {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.story-quote {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.founder-name {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ====================
+   Investor Spotlight Section
+   ==================== */
+.investor-spotlight-section {
+    padding: 6rem 0;
+}
+
+.investors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.investor-card {
+    background-color: var(--bg-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.investor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.investor-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.investor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.investor-content {
+    padding: 1.5rem;
+}
+
+.investor-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.investor-focus, .investor-investments {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ====================
+   Footer
+   ==================== */
+.main-footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 5rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand {
+    grid-column: span 2;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.footer-links ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    font-family: var(--font-sans);
+}
+
+.newsletter-form button {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-content, .hero-3d-model {
+        width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 4rem;
+    }
+
+    .footer-brand {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pitch-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        border-radius: var(--radius-md);
+        margin-bottom: 0.75rem;
+    }
+
+    .newsletter-form button {
+        border-radius: var(--radius-md);
+        width: 100%;
+    }
+}
