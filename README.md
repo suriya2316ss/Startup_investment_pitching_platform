@@ -2,7 +2,7 @@
 
 A comprehensive, AI-powered web platform that connects startups with potential investors. This platform allows startup founders to pitch their ideas, while investors can explore, evaluate, and invest in emerging businesses through an interactive and dynamic interface.
 
----
+----
 
 ## 🌟 Features
 
